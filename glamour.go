@@ -61,8 +61,7 @@ func NewTermRenderer(options ...TermRendererOption) (*TermRenderer, error) {
 	tr := &TermRenderer{
 		md: goldmark.New(
 			goldmark.WithExtensions(
-				extension.GFM,
-				extension.DefinitionList,
+				extension.Linkify,
 			),
 			goldmark.WithParserOptions(
 				parser.WithAutoHeadingID(),
